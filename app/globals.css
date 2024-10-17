@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+/* .main-layout {
+  background-image: url("./images/hogwarts-desktop-2.jpg");
+  height: 800px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+} */
+
+body {
+  font-family: Inter, sans-serif;
+  height: 100vh;
+  background-image: radial-gradient(ellipse, #6f6c6c, #1e1f22);
+  position: relative;
+}
+
+.content-holder {
+  background-image: url("./images/castle.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 800px;
+  height: 500px;
+  max-width: 100%;
+  /* background: grey; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* margin: 0 auto; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @media screen and (max-width: 640px) {
+    background-image: url("./images/hogwarts-castle.jpg");
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+.main-heading {
+  position: absolute;
+  z-index: 3;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 95px;
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+
+  @media screen and (max-width: 640px) {
+    font-size: 2rem;
+    top: 30px;
+  }
+}
+
+.hide-button {
+  display: none;
+}
+
+/* SPINNER */
+.spinner {
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  transform: translateX(-50%) translateZ(0);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  border-top: 7px solid #e2e7e9;
+  border-right: 7px solid #e2e7e9;
+  border-bottom: 7px solid #e2e7e9;
+  border-left: 7px solid #ccd1d3;
+  animation: spinner 1s infinite linear;
+}
+
+@keyframes spinner {
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
