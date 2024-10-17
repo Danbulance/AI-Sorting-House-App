@@ -9,6 +9,7 @@ import FetchAiButton from "./components/FetchAiButton";
 import ResultsGenerated from "./components/ResultsGenerated";
 import Spinner from "./components/Spinner";
 import { getResponse } from "./actions";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function Home() {
   const [startApp, setStartApp] = useState(false);
@@ -166,6 +167,8 @@ export default function Home() {
 
   return (
     <main className="main-layout">
+      <Analytics />
+
       <Heading />
 
       <div className="content-holder">
