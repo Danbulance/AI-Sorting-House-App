@@ -36,9 +36,12 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 
+  @media screen and (max-width: 932px) {
+    width: 100%;
+  }
+
   @media screen and (max-width: 640px) {
     background-image: url("./images/hogwarts-castle.jpg");
-    width: 100vw;
     height: 100vh;
   }
 }
@@ -54,6 +57,16 @@ body {
   text-align: center;
   color: white;
   font-size: 3rem;
+
+  @media screen and (max-width: 1500px) {
+    font-size: 3rem;
+    top: 95px;
+  }
+
+  @media screen and (max-height: 700px) {
+    font-size: 2.5rem;
+    top: 20px;
+  }
 
   @media screen and (max-width: 640px) {
     font-size: 2rem;
